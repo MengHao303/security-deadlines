@@ -1,0 +1,94 @@
+{
+  "updated_at": "2026-08-29",
+  "note": "Deadline calendar for the top-4 security conferences (IEEE S&P / ACM CCS / USENIX Security / NDSS). Events with estimated=true: CFP not yet published; dates are projections from past cycles and must be verified. Timezones: AoE (UTC-12, i.e., until 19:59 SGT the next day) unless noted otherwise.",
+  "conferences": [
+    {
+      "id": "sp-2027",
+      "short_name": "IEEE S&P 2027",
+      "full_name": "IEEE Symposium on Security and Privacy 2027 (48th)",
+      "conference_dates": { "start": "2027-05-17", "end": "2027-05-19" },
+      "location": "Montreal, Canada",
+      "source_url": "https://www.ieee-security.org/Calendar/cfps/cfp-SP2027.html",
+      "verified_on": "2026-08-29",
+      "events": [
+        { "kind": "abstract", "label": "Cycle 2 abstract registration", "date": "2026-11-10", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
+        { "kind": "submission", "label": "Cycle 2 paper deadline", "date": "2026-11-17", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
+        { "kind": "notification", "label": "Cycle 2 notification", "date": "2027-03-05", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
+        { "kind": "camera-ready", "label": "Camera-ready deadline", "date": "2027-04-08", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
+        { "kind": "conference", "label": "Conference (workshops May 20)", "date": "2027-05-17", "date_end": "2027-05-19", "tz_note": null, "estimated": false, "estimated_from": null }
+      ]
+    },
+    {
+      "id": "usenixsec-2027",
+      "short_name": "USENIX Security 2027",
+      "full_name": "36th USENIX Security Symposium",
+      "conference_dates": { "start": "2027-08-11", "end": "2027-08-13" },
+      "location": "Denver, CO, USA",
+      "source_url": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers",
+      "verified_on": "2026-08-29",
+      "events": [
+        { "kind": "registration", "label": "Cycle 2 mandatory registration", "date": "2027-01-19", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
+        { "kind": "submission", "label": "Cycle 2 paper deadline", "date": "2027-01-26", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
+        { "kind": "notification", "label": "Cycle 2 notification", "date": "2027-05-06", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
+        { "kind": "camera-ready", "label": "Final papers due", "date": "2027-06-03", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
+        { "kind": "conference", "label": "Conference", "date": "2027-08-11", "date_end": "2027-08-13", "tz_note": null, "estimated": false, "estimated_from": null }
+      ]
+    },
+    {
+      "id": "ndss-2027",
+      "short_name": "NDSS 2027",
+      "full_name": "Network and Distributed System Security Symposium 2027",
+      "conference_dates": { "start": "2027-03-22", "end": "2027-03-26" },
+      "location": "Seoul, Korea",
+      "source_url": "https://www.ndss-symposium.org/ndss2027/submissions/call-for-papers/",
+      "verified_on": "2026-08-29",
+      "events": [
+        { "kind": "notification", "label": "Fall cycle notification", "date": "2026-11-04", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
+        { "kind": "camera-ready", "label": "Camera-ready deadline", "date": "2027-01-06", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
+        { "kind": "conference", "label": "Conference", "date": "2027-03-22", "date_end": "2027-03-26", "tz_note": null, "estimated": false, "estimated_from": null }
+      ]
+    },
+    {
+      "id": "ccs-2026",
+      "short_name": "CCS 2026",
+      "full_name": "ACM Conference on Computer and Communications Security 2026",
+      "conference_dates": { "start": "2026-11-15", "end": "2026-11-19" },
+      "location": "The Hague, Netherlands",
+      "source_url": "https://www.sigsac.org/ccs/CCS2026/call-for/call-for-papers.html",
+      "verified_on": "2026-08-29",
+      "events": [
+        { "kind": "conference", "label": "Conference (both cycles closed)", "date": "2026-11-15", "date_end": "2026-11-19", "tz_note": null, "estimated": false, "estimated_from": null }
+      ]
+    },
+    {
+      "id": "ccs-2027",
+      "short_name": "CCS 2027",
+      "full_name": "ACM Conference on Computer and Communications Security 2027",
+      "conference_dates": null,
+      "location": "Atlanta, USA (October 2027, exact dates TBA)",
+      "source_url": "https://www.sigsac.org/ccs/CCS2027/",
+      "verified_on": "2026-08-29",
+      "events": [
+        { "kind": "abstract", "label": "Cycle A abstract registration", "date": "2027-01-06", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "CCS 2026 Cycle A (2026-01-07)" },
+        { "kind": "submission", "label": "Cycle A paper deadline", "date": "2027-01-13", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "CCS 2026 Cycle A (2026-01-14)" },
+        { "kind": "abstract", "label": "Cycle B abstract registration", "date": "2027-04-21", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "CCS 2026 Cycle B (2026-04-22)" },
+        { "kind": "submission", "label": "Cycle B paper deadline", "date": "2027-04-28", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "CCS 2026 Cycle B (2026-04-29)" }
+      ]
+    },
+    {
+      "id": "ndss-2028",
+      "short_name": "NDSS 2028",
+      "full_name": "Network and Distributed System Security Symposium 2028",
+      "conference_dates": null,
+      "location": "TBA (San Diego in past years, Feb–Mar)",
+      "source_url": "https://www.ndss-symposium.org/",
+      "verified_on": "2026-08-29",
+      "events": [
+        { "kind": "submission", "label": "Summer cycle paper deadline", "date": "2027-05-05", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "NDSS 2027 Summer (2026-05-06)" },
+        { "kind": "notification", "label": "Summer cycle notification", "date": "2027-07-21", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "NDSS 2027 Summer (2026-07-22)" },
+        { "kind": "submission", "label": "Fall cycle paper deadline", "date": "2027-08-18", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "NDSS 2027 Fall (2026-08-19)" },
+        { "kind": "notification", "label": "Fall cycle notification", "date": "2027-11-03", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "NDSS 2027 Fall (2026-11-04)" }
+      ]
+    }
+  ]
+}
