@@ -26,4 +26,27 @@ echo "=== CFP check started $(date '+%Y-%m-%d %H:%M:%S') ===" >> "$LOG"
     >> "$LOG" 2>&1
 rc=$?
 echo "=== CFP check finished $(date '+%Y-%m-%d %H:%M:%S') (exit $rc) ===" >> "$LOG"
+
+# 核查成功后：有文件变化则提交并推送，公开站点随之更新；
+# 核查失败则不碰 git，避免把错误状态推上线。
+if [ "$rc" -eq 0 ]; then
+    export HTTPS_PROXY=http://127.0.0.1:10808 HTTP_PROXY=http://127.0.0.1:10808
+    if git status --porcelain | grep -q .; then
+        git add -A
+        if git -c user.name="Meng Hao" -c user.email="menghao303@gmail.com" \
+               commit -m "CFP check $(date '+%Y-%m-%d'): refresh data and generated files" >> "$LOG" 2>&1; then
+            if git push >> "$LOG" 2>&1; then
+                echo "=== pushed to GitHub ===" >> "$LOG"
+            else
+                echo "=== git push FAILED (see log above) ===" >> "$LOG"
+            fi
+        else
+            echo "=== git commit FAILED (see log above) ===" >> "$LOG"
+        fi
+    else
+        echo "=== no changes, nothing to push ===" >> "$LOG"
+    fi
+else
+    echo "=== check failed (exit $rc), skipping git push ===" >> "$LOG"
+fi
 exit 0

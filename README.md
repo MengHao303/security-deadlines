@@ -42,11 +42,14 @@ python3 generate.py    # stdlib only, no dependencies
 
 ## Automated monthly CFP check (launchd)
 
-A monthly job verifies the official CFP pages against `deadlines.json` and updates anything that changed:
+A monthly job verifies the official CFP pages against `deadlines.json`, updates anything that changed, regenerates the artifacts, and — only if the check succeeded — commits and pushes the changes so the public site stays current:
 
-- `cfp-check.sh` — wrapper that runs Claude Code headless with the fixed prompt in `cfp-check-prompt.md`
+- `cfp-check.sh` — wrapper that runs Claude Code headless with the fixed prompt in `cfp-check-prompt.md`, then commits/pushes if the check succeeded and files changed
+- `cfp-check.env` — API credentials in `~/.claude/` (outside the repo; created separately, see note below)
 - `com.menghao.security-deadlines-cfpcheck.plist` — launchd agent, runs on the 3rd of every month at 09:07 local time
-- Logs to `cfp-check.log`; re-run `python3 generate.py` after any change
+- Logs to `cfp-check.log`
+
+Note: the wrapper loads `~/.claude/cfp-check.env` (ANTHROPIC_* variables for the API gateway). Create it once with `chmod 600` before the first run, e.g. by exporting the same variables your interactive Claude Code session uses.
 
 Install / inspect:
 
