@@ -19,6 +19,63 @@ body {
   tr.passed { color: #6b7280 !important; }
   tr.estimated { background: #2b2418 !important; }
 }
+/* Timeline chart (data-viz slots per the validated reference palette) */
+.viz-root {
+  color-scheme: light;
+  --viz-surface: #fcfcfb;
+  --ink-primary: #0b0b0b;
+  --ink-secondary: #52514e;
+  --ink-muted: #898781;
+  --gridline: #e1e0d9;
+  --baseline: #c3c2b7;
+  --series-1: #2a78d6;
+  --series-2: #008300;
+  --series-3: #e87ba4;
+  --series-4: #eda100;
+}
+@media (prefers-color-scheme: dark) {
+  .viz-root {
+    color-scheme: dark;
+    --viz-surface: #1a1a19;
+    --ink-primary: #ffffff;
+    --ink-secondary: #c3c2b7;
+    --ink-muted: #898781;
+    --gridline: #2c2c2a;
+    --baseline: #383835;
+    --series-1: #3987e5;
+    --series-2: #008300;
+    --series-3: #d55181;
+    --series-4: #c98500;
+  }
+}
+.tl-wrap {
+  background: var(--viz-surface);
+  border: 1px solid var(--gridline);
+  border-radius: 10px;
+  padding: .8rem .8rem .4rem;
+  margin-bottom: 1.2rem;
+}
+.tl-wrap svg { display: block; width: 100%; height: auto; }
+.tl-row, .tl-date, .tl-legend, .tl-tick, .tl-today, .tl-caption { font-family: inherit; }
+.tl-row { font-size: 13px; font-weight: 500; fill: var(--ink-primary); }
+.tl-date { font-size: 11.5px; fill: var(--ink-secondary); }
+.tl-est { fill: var(--ink-muted); }
+.tl-legend { font-size: 12px; fill: var(--ink-secondary); }
+.tl-tick { font-size: 11px; fill: var(--ink-muted); }
+.tl-today { font-size: 10px; fill: var(--ink-muted); }
+.tl-hit { cursor: pointer; }
+.tl-group:hover .tl-dot, .tl-group:focus-within .tl-dot { filter: brightness(1.18); }
+.tl-caption { font-size: .8rem; color: var(--ink-muted); margin: .5rem 0 .3rem; }
+.tl-tip {
+  position: fixed; z-index: 10; pointer-events: none; display: none;
+  background: var(--viz-surface); color: var(--ink-primary);
+  border: 1px solid var(--baseline); border-radius: 6px;
+  padding: .45rem .65rem; font-size: 12px; line-height: 1.45; max-width: 280px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.tl-tip.show { display: block; }
+.tl-tip strong { font-variant-numeric: tabular-nums; }
+.tl-tip .tl-tip-note { color: var(--ink-muted); }
 .wrap { max-width: 900px; margin: 0 auto; }
 h1 { font-size: 1.6rem; margin: 0 0 .3rem; }
 .sub { color: #6b7280; font-size: .9rem; margin-bottom: 1.2rem; }
@@ -60,6 +117,7 @@ footer { margin-top: 2rem; font-size: .8rem; color: #9ca3af; }
 <div class="wrap">
 <h1>🗓️ Top-4 Security Conference Deadline Calendar</h1>
 <div class="sub">IEEE S&amp;P · ACM CCS · USENIX Security · NDSS ｜ data updated 2026-08-29 (generated 2026-08-30)</div>
+<div class="viz-root tl-wrap"><svg viewBox="0 0 960 302" role="img" aria-label="Paper submission deadlines for the top-4 security conferences, Sep 2026 to Aug 2027"><g><circle cx="154.0" cy="20" r="4" fill="var(--series-1)"/><text x="164.0" y="24" class="tl-legend">IEEE S&P 2027</text><circle cx="285.7" cy="20" r="4" fill="var(--series-2)"/><text x="295.7" y="24" class="tl-legend">CCS 2027</text><circle cx="382.9" cy="20" r="4" fill="var(--series-3)"/><text x="392.9" y="24" class="tl-legend">USENIX Security 2027</text><circle cx="562.9" cy="20" r="4" fill="var(--series-4)"/><text x="572.9" y="24" class="tl-legend">NDSS 2028</text><circle cx="667.0" cy="20" r="4" fill="var(--viz-surface)" stroke="var(--ink-muted)" stroke-width="1.5"/><text x="677.0" y="24" class="tl-legend">projected</text></g><line x1="150" y1="270.0" x2="936" y2="270.0" stroke="var(--baseline)" stroke-width="1"/><line x1="150.0" y1="46" x2="150.0" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="150.0" y="290" class="tl-tick" text-anchor="start">Sep 2026</text><line x1="214.8" y1="46" x2="214.8" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="214.8" y="290" class="tl-tick" text-anchor="middle">Oct</text><line x1="281.7" y1="46" x2="281.7" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="281.7" y="290" class="tl-tick" text-anchor="middle">Nov</text><line x1="346.5" y1="46" x2="346.5" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="346.5" y="290" class="tl-tick" text-anchor="middle">Dec</text><line x1="413.4" y1="46" x2="413.4" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="413.4" y="290" class="tl-tick" text-anchor="middle">Jan 2027</text><line x1="480.4" y1="46" x2="480.4" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="480.4" y="290" class="tl-tick" text-anchor="middle">Feb</text><line x1="540.8" y1="46" x2="540.8" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="540.8" y="290" class="tl-tick" text-anchor="middle">Mar</text><line x1="607.8" y1="46" x2="607.8" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="607.8" y="290" class="tl-tick" text-anchor="middle">Apr</text><line x1="672.6" y1="46" x2="672.6" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="672.6" y="290" class="tl-tick" text-anchor="middle">May</text><line x1="739.5" y1="46" x2="739.5" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="739.5" y="290" class="tl-tick" text-anchor="middle">Jun</text><line x1="804.3" y1="46" x2="804.3" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="804.3" y="290" class="tl-tick" text-anchor="middle">Jul</text><line x1="871.2" y1="46" x2="871.2" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="871.2" y="290" class="tl-tick" text-anchor="middle">Aug</text><line x1="936.0" y1="46" x2="936.0" y2="270" stroke="var(--gridline)" stroke-width="1"/><text x="936.0" y="290" class="tl-tick" text-anchor="end">Sep</text><text x="144" y="78.0" class="tl-row" text-anchor="end">IEEE S&P 2027</text><g class="tl-group"><circle class="tl-hit" cx="316.3" cy="74.0" r="12" fill="transparent" tabindex="0" role="img" aria-label="IEEE S&P 2027: Cycle 2 paper deadline 2026-11-17" data-title="IEEE S&P 2027" data-event="Cycle 2 paper deadline" data-date="2026-11-17" data-note="AoE (UTC-12)"/><circle cx="316.3" cy="74.0" r="7" fill="var(--viz-surface)"/><circle class="tl-dot" cx="316.3" cy="74.0" r="5" fill="var(--series-1)"/></g><text x="316.3" y="98.0" class="tl-date" text-anchor="middle">Nov 17</text><line x1="150" y1="102.0" x2="936" y2="102.0" stroke="var(--gridline)" stroke-width="1"/><text x="144" y="134.0" class="tl-row" text-anchor="end">CCS 2027</text><g class="tl-group"><circle class="tl-hit" cx="439.4" cy="130.0" r="12" fill="transparent" tabindex="0" role="img" aria-label="CCS 2027: Cycle A paper deadline 2027-01-13" data-title="CCS 2027" data-event="Cycle A paper deadline" data-date="2027-01-13" data-note="AoE (UTC-12) · projected from CCS 2026 Cycle A (2026-01-14) — verify"/><circle cx="439.4" cy="130.0" r="7" fill="var(--viz-surface)"/><circle class="tl-dot" cx="439.4" cy="130.0" r="5" fill="var(--viz-surface)" stroke="var(--series-2)" stroke-width="2"/></g><text x="439.4" y="154.0" class="tl-date" text-anchor="middle">Jan 13<tspan class="tl-est"> est.</tspan></text><g class="tl-group"><circle class="tl-hit" cx="666.1" cy="130.0" r="12" fill="transparent" tabindex="0" role="img" aria-label="CCS 2027: Cycle B paper deadline 2027-04-28" data-title="CCS 2027" data-event="Cycle B paper deadline" data-date="2027-04-28" data-note="AoE (UTC-12) · projected from CCS 2026 Cycle B (2026-04-29) — verify"/><circle cx="666.1" cy="130.0" r="7" fill="var(--viz-surface)"/><circle class="tl-dot" cx="666.1" cy="130.0" r="5" fill="var(--viz-surface)" stroke="var(--series-2)" stroke-width="2"/></g><text x="666.1" y="154.0" class="tl-date" text-anchor="middle">Apr 28<tspan class="tl-est"> est.</tspan></text><line x1="150" y1="158.0" x2="936" y2="158.0" stroke="var(--gridline)" stroke-width="1"/><text x="144" y="190.0" class="tl-row" text-anchor="end">USENIX Security 2027</text><g class="tl-group"><circle class="tl-hit" cx="467.4" cy="186.0" r="12" fill="transparent" tabindex="0" role="img" aria-label="USENIX Security 2027: Cycle 2 paper deadline 2027-01-26" data-title="USENIX Security 2027" data-event="Cycle 2 paper deadline" data-date="2027-01-26" data-note="AoE (UTC-12)"/><circle cx="467.4" cy="186.0" r="7" fill="var(--viz-surface)"/><circle class="tl-dot" cx="467.4" cy="186.0" r="5" fill="var(--series-3)"/></g><text x="467.4" y="210.0" class="tl-date" text-anchor="middle">Jan 26</text><line x1="150" y1="214.0" x2="936" y2="214.0" stroke="var(--gridline)" stroke-width="1"/><text x="144" y="246.0" class="tl-row" text-anchor="end">NDSS 2028</text><g class="tl-group"><circle class="tl-hit" cx="681.2" cy="242.0" r="12" fill="transparent" tabindex="0" role="img" aria-label="NDSS 2028: Summer cycle paper deadline 2027-05-05" data-title="NDSS 2028" data-event="Summer cycle paper deadline" data-date="2027-05-05" data-note="AoE (UTC-12) · projected from NDSS 2027 Summer (2026-05-06) — verify"/><circle cx="681.2" cy="242.0" r="7" fill="var(--viz-surface)"/><circle class="tl-dot" cx="681.2" cy="242.0" r="5" fill="var(--viz-surface)" stroke="var(--series-4)" stroke-width="2"/></g><text x="681.2" y="266.0" class="tl-date" text-anchor="middle">May 5<tspan class="tl-est"> est.</tspan></text><g class="tl-group"><circle class="tl-hit" cx="907.9" cy="242.0" r="12" fill="transparent" tabindex="0" role="img" aria-label="NDSS 2028: Fall cycle paper deadline 2027-08-18" data-title="NDSS 2028" data-event="Fall cycle paper deadline" data-date="2027-08-18" data-note="AoE (UTC-12) · projected from NDSS 2027 Fall (2026-08-19) — verify"/><circle cx="907.9" cy="242.0" r="7" fill="var(--viz-surface)"/><circle class="tl-dot" cx="907.9" cy="242.0" r="5" fill="var(--viz-surface)" stroke="var(--series-4)" stroke-width="2"/></g><text x="892.0" y="266.0" class="tl-date" text-anchor="middle">Aug 18<tspan class="tl-est"> est.</tspan></text></svg><p class="tl-caption">Paper submission deadlines, Sep 2026 – Aug 2027. Hollow dots = projected (CFP not yet published). Registration dates and notifications are listed below.</p></div>
 <div class="notes">
 Dates are as stated by the official CFPs, timezone <b>AoE (UTC-12)</b> — in Singapore time (UTC+8) deadlines
 effectively extend to 19:59 the next day. <b>Orange rows</b> = CFP not yet published, dates projected from past
@@ -86,6 +144,46 @@ document.querySelectorAll('[data-date]').forEach(el => {
   else if (n === 0) { el.textContent = 'today!'; el.classList.add('soon'); }
   else el.textContent = (-n) + ' days ago';
 });
+
+// Timeline tooltip (values first, labels follow; textContent only)
+(function () {
+  const tip = document.createElement('div');
+  tip.className = 'tl-tip';
+  tip.setAttribute('role', 'tooltip');
+  document.body.appendChild(tip);
+
+  function fill(hit) {
+    tip.replaceChildren();
+    const strong = document.createElement('strong');
+    strong.textContent = hit.dataset.date;
+    const row = document.createElement('div');
+    row.textContent = hit.dataset.title + ' — ' + hit.dataset.event;
+    const note = document.createElement('div');
+    note.className = 'tl-tip-note';
+    note.textContent = hit.dataset.note;
+    tip.append(strong, row, note);
+  }
+  function place(x, y) {
+    tip.classList.add('show');
+    const pad = 10;
+    let left = x + 14, top = y + 14;
+    if (left + tip.offsetWidth > window.innerWidth - pad) left = x - tip.offsetWidth - 14;
+    if (top + tip.offsetHeight > window.innerHeight - pad) top = y - tip.offsetHeight - 14;
+    tip.style.left = Math.max(pad, left) + 'px';
+    tip.style.top = Math.max(pad, top) + 'px';
+  }
+  document.querySelectorAll('.tl-hit').forEach(hit => {
+    hit.addEventListener('pointerenter', () => fill(hit));
+    hit.addEventListener('pointermove', e => place(e.clientX, e.clientY));
+    hit.addEventListener('pointerleave', () => tip.classList.remove('show'));
+    hit.addEventListener('focus', () => {
+      fill(hit);
+      const r = hit.getBoundingClientRect();
+      place(r.right, r.top);
+    });
+    hit.addEventListener('blur', () => tip.classList.remove('show'));
+  });
+})();
 </script>
 </body>
 </html>

@@ -5,7 +5,7 @@ Deadline tracking for the top-4 security conferences — **IEEE S&P / ACM CCS / 
 | Artifact | Path | Purpose |
 |---|---|---|
 | ICS | `docs/security-deadlines.ics` | Import into Google/Apple Calendar; reminders 7 + 1 days before deadlines |
-| HTML | `docs/index.html` | Browser view with live countdowns — published at <https://menghao303.github.io/security-deadlines/> |
+| HTML | `docs/index.html` | Browser view with a 12-month submission-deadline timeline at the top and live countdowns — published at <https://menghao303.github.io/security-deadlines/> |
 | Markdown | `docs/deadlines.md` | Quick-reference table in the repo |
 
 ## Importing the calendar
