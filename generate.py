@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""从 deadlines.json 生成 ICS / HTML / Markdown 三种日历产物（仅标准库）。
+"""Generate ICS / HTML / Markdown from deadlines.json (stdlib only).
 
-用法：python3 generate.py
-输出：output/security-deadlines.ics、output/index.html、output/deadlines.md
+Usage: python3 generate.py
+Outputs: docs/security-deadlines.ics, docs/index.html, docs/deadlines.md
+(docs/ doubles as the GitHub Pages source directory)
 """
 import datetime
 import hashlib
@@ -13,7 +14,7 @@ import pathlib
 
 ROOT = pathlib.Path(__file__).parent
 DATA = ROOT / "deadlines.json"
-OUT = ROOT / "output"
+OUT = ROOT / "docs"
 
 KIND_LABEL = {
     "abstract": "Abstract reg.",

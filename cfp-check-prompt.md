@@ -8,7 +8,7 @@ You are maintaining the top-4 security conference deadline calendar in this dire
    - changed submission / registration / notification / camera-ready dates
    - newly published CFPs: if an `estimated: true` conference now has official dates, replace the projected dates, set `estimated` to `false`, set `estimated_from` to `null`, and fill `conference_dates` / `location` if now known
    - conference date or location changes
-4. If anything changed: update `deadlines.json` accordingly, set `updated_at` and each changed conference's `verified_on` to today's date (YYYY-MM-DD), then re-run `python3 generate.py` and confirm all three files in `output/` were regenerated.
+4. If anything changed: update `deadlines.json` accordingly, set `updated_at` and each changed conference's `verified_on` to today's date (YYYY-MM-DD), then re-run `python3 generate.py` and confirm all three files in `docs/` were regenerated.
 5. If nothing changed: set `updated_at` to today and each conference's `verified_on` to today (these fields track when data was last checked), do NOT re-run the generator.
 6. End your reply with a short report (max 5 lines): what changed, or "No changes".
 

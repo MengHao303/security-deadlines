@@ -4,13 +4,13 @@ Deadline tracking for the top-4 security conferences — **IEEE S&P / ACM CCS / 
 
 | Artifact | Path | Purpose |
 |---|---|---|
-| ICS | `output/security-deadlines.ics` | Import into Google/Apple Calendar; reminders 7 + 1 days before deadlines |
-| HTML | `output/index.html` | Browser view with live countdowns — published at <https://menghao303.github.io/security-deadlines/> |
-| Markdown | `output/deadlines.md` | Quick-reference table in the repo |
+| ICS | `docs/security-deadlines.ics` | Import into Google/Apple Calendar; reminders 7 + 1 days before deadlines |
+| HTML | `docs/index.html` | Browser view with live countdowns — published at <https://menghao303.github.io/security-deadlines/> |
+| Markdown | `docs/deadlines.md` | Quick-reference table in the repo |
 
 ## Importing the calendar
 
-- **Apple Calendar**: double-click `security-deadlines.ics` (or `open output/security-deadlines.ics`) and choose a calendar.
+- **Apple Calendar**: double-click `security-deadlines.ics` (or `open docs/security-deadlines.ics`) and choose a calendar.
 - **Google Calendar**: Settings → Import & export → Import the ICS file. A dedicated "Deadlines" calendar is recommended so reminders can be toggled as a group.
 - Events are all-day, e.g. `S&P 2027 Cycle 2 paper deadline`. Reminders (VALARM): 7 + 1 days for registration/submission, 1 day for notifications and camera-ready, 7 + 1 days for conferences.
 
