@@ -11,10 +11,18 @@ LOG="$DIR/cfp-check.log"
 
 ALLOWED="Bash(curl:*),Bash(python3:*),Bash(ls:*),Read,Edit,Write,Glob"
 
+# API 配置（ANTHROPIC_*）存放在仓库外的 ~/.claude/cfp-check.env，避免 token 进入公开仓库
+ENV_FILE="$HOME/.claude/cfp-check.env"
+if [ -f "$ENV_FILE" ]; then
+    set -a
+    # shellcheck disable=SC1090
+    source "$ENV_FILE"
+    set +a
+fi
+
 echo "=== CFP check started $(date '+%Y-%m-%d %H:%M:%S') ===" >> "$LOG"
 /Users/haomeng/.local/bin/claude -p "$(cat "$DIR/cfp-check-prompt.md")" \
     --allowedTools "$ALLOWED" \
-    --max-turns 30 \
     >> "$LOG" 2>&1
 rc=$?
 echo "=== CFP check finished $(date '+%Y-%m-%d %H:%M:%S') (exit $rc) ===" >> "$LOG"
