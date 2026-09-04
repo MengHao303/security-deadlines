@@ -47,11 +47,10 @@ python3 generate.py    # stdlib only, no dependencies
 A weekly job verifies the official CFP pages against `deadlines.json`, updates anything that changed, regenerates the artifacts, and — only if the check succeeded — commits and pushes the changes so the public site stays current:
 
 - `cfp-check.sh` — wrapper that runs Claude Code headless with the fixed prompt in `cfp-check-prompt.md`, then commits/pushes if the check succeeded and files changed
-- `cfp-check.env` — API credentials in `~/.claude/` (outside the repo; created separately, see note below)
 - `com.menghao.security-deadlines-cfpcheck.plist` — launchd agent, runs every Monday at 09:07 local time
 - Logs to `cfp-check.log`
 
-Note: the wrapper loads `~/.claude/cfp-check.env` (ANTHROPIC_* variables for the API gateway). Create it once with `chmod 600` before the first run, e.g. by exporting the same variables your interactive Claude Code session uses.
+Note: the job runs as the account you are logged into with `claude` (credentials live in the macOS Keychain). The wrapper unsets any inherited `ANTHROPIC_*` gateway variables so it always talks to the default endpoint — no tokens are needed in or next to the repo.
 
 Install / inspect:
 

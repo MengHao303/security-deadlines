@@ -11,14 +11,10 @@ LOG="$DIR/cfp-check.log"
 
 ALLOWED="Bash(curl:*),Bash(python3:*),Bash(ls:*),Read,Edit,Write,Glob"
 
-# API 配置（ANTHROPIC_*）存放在仓库外的 ~/.claude/cfp-check.env，避免 token 进入公开仓库
-ENV_FILE="$HOME/.claude/cfp-check.env"
-if [ -f "$ENV_FILE" ]; then
-    set -a
-    # shellcheck disable=SC1090
-    source "$ENV_FILE"
-    set +a
-fi
+# 使用 Claude Code 已登录的账号（凭据在 Keychain 里，不需要仓库内的任何 token）。
+# 显式清掉可能从环境继承来的第三方网关变量，避免 job 被指到别的 endpoint。
+unset ANTHROPIC_BASE_URL ANTHROPIC_AUTH_TOKEN ANTHROPIC_API_KEY ANTHROPIC_MODEL \
+      ANTHROPIC_DEFAULT_OPUS_MODEL ANTHROPIC_DEFAULT_SONNET_MODEL ANTHROPIC_DEFAULT_HAIKU_MODEL
 
 echo "=== CFP check started $(date '+%Y-%m-%d %H:%M:%S') ===" >> "$LOG"
 /Users/haomeng/.local/bin/claude -p "$(cat "$DIR/cfp-check-prompt.md")" \
