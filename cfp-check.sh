@@ -30,12 +30,27 @@ echo "=== CFP check finished $(date '+%Y-%m-%d %H:%M:%S') (exit $rc) ===" >> "$L
 # 核查成功后：有文件变化则提交并推送，公开站点随之更新；
 # 核查失败则不碰 git，避免把错误状态推上线。
 if [ "$rc" -eq 0 ]; then
-    export HTTPS_PROXY=http://127.0.0.1:10808 HTTP_PROXY=http://127.0.0.1:10808
+    # 代理自动探测：本机代理端口连得上才走代理，否则直连。
+    # 全局 git config 里配了 http(s).proxy，直连时必须显式置空覆盖它。
+    PROXY_HOST=127.0.0.1
+    PROXY_PORT=10808
+    if (exec 3<>"/dev/tcp/$PROXY_HOST/$PROXY_PORT") 2>/dev/null; then
+        exec 3>&-
+        PROXY_URL="http://$PROXY_HOST:$PROXY_PORT"
+        export HTTPS_PROXY="$PROXY_URL" HTTP_PROXY="$PROXY_URL"
+        echo "=== proxy up at $PROXY_HOST:$PROXY_PORT, pushing through it ===" >> "$LOG"
+    else
+        PROXY_URL=""
+        unset HTTPS_PROXY HTTP_PROXY
+        echo "=== no proxy at $PROXY_HOST:$PROXY_PORT, pushing directly ===" >> "$LOG"
+    fi
+    GIT_PROXY=(-c "http.proxy=$PROXY_URL" -c "https.proxy=$PROXY_URL")
+
     if git status --porcelain | grep -q .; then
         git add -A
         if git -c user.name="Meng Hao" -c user.email="menghao303@gmail.com" \
                commit -m "CFP check $(date '+%Y-%m-%d'): refresh data and generated files" >> "$LOG" 2>&1; then
-            if git push >> "$LOG" 2>&1; then
+            if git "${GIT_PROXY[@]}" push >> "$LOG" 2>&1; then
                 echo "=== pushed to GitHub ===" >> "$LOG"
             else
                 echo "=== git push FAILED (see log above) ===" >> "$LOG"
