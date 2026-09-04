@@ -1,6 +1,6 @@
 {
   "updated_at": "2026-08-30",
-  "note": "Deadline calendar for the top-4 security conferences (IEEE S&P / ACM CCS / USENIX Security / NDSS). Events with estimated=true: CFP not yet published; dates are projections from past cycles and must be verified. Timezones: AoE (UTC-12, i.e., until 19:59 SGT the next day) unless noted otherwise.",
+  "note": "Deadline calendar for the top-4 security conferences (IEEE S&P / ACM CCS / USENIX Security / NDSS). Tracked event kinds: abstract/mandatory registration, paper deadline, notification, conference dates (camera-ready deadlines are intentionally not tracked). Events with estimated=true: CFP not yet published; dates are projections from past cycles and must be verified. Timezones: AoE (UTC-12, i.e., until 19:59 SGT the next day) unless noted otherwise.",
   "conferences": [
     {
       "id": "sp-2027",
@@ -14,7 +14,6 @@
         { "kind": "abstract", "label": "Cycle 2 abstract registration", "date": "2026-11-10", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
         { "kind": "submission", "label": "Cycle 2 paper deadline", "date": "2026-11-17", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
         { "kind": "notification", "label": "Cycle 2 notification", "date": "2027-03-05", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
-        { "kind": "camera-ready", "label": "Camera-ready deadline", "date": "2027-04-08", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
         { "kind": "conference", "label": "Conference (workshops May 20)", "date": "2027-05-17", "date_end": "2027-05-19", "tz_note": null, "estimated": false, "estimated_from": null }
       ]
     },
@@ -30,7 +29,6 @@
         { "kind": "registration", "label": "Cycle 2 mandatory registration", "date": "2027-01-19", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
         { "kind": "submission", "label": "Cycle 2 paper deadline", "date": "2027-01-26", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
         { "kind": "notification", "label": "Cycle 2 notification", "date": "2027-05-06", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
-        { "kind": "camera-ready", "label": "Final papers due", "date": "2027-06-03", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
         { "kind": "conference", "label": "Conference", "date": "2027-08-11", "date_end": "2027-08-13", "tz_note": null, "estimated": false, "estimated_from": null }
       ]
     },
@@ -44,7 +42,6 @@
       "verified_on": "2026-08-30",
       "events": [
         { "kind": "notification", "label": "Fall cycle notification", "date": "2026-11-04", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
-        { "kind": "camera-ready", "label": "Camera-ready deadline", "date": "2027-01-06", "date_end": null, "tz_note": "AoE", "estimated": false, "estimated_from": null },
         { "kind": "conference", "label": "Conference", "date": "2027-03-22", "date_end": "2027-03-26", "tz_note": null, "estimated": false, "estimated_from": null }
       ]
     },

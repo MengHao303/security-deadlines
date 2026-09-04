@@ -1,5 +1,5 @@
 #!/bin/bash
-# Monthly CFP check for the deadline calendar (run by launchd on the 3rd of each month).
+# Weekly CFP check for the deadline calendar (run by launchd every Monday).
 # Runs Claude Code headless with the fixed, scoped prompt in cfp-check-prompt.md.
 # Tool access is allowlisted to the minimum needed: curl (fetch official CFPs),
 # python3 (regenerate outputs), basic file reads/writes in this directory.

@@ -10,8 +10,8 @@ DTEND;VALUE=DATE:20261105
 SUMMARY:NDSS 2027 Fall cycle notification
 DESCRIPTION:Network and Distributed System Security Symposium 2027\\nEvent:
   Fall cycle notification\\nOfficial source: https://www.ndss-symposium.org
- /ndss2027/submissions/call-for-papers/\\nData verified on: 2026-08-30\\nTi
- mezone: AoE (until 19:59 SGT the next day)
+ /ndss2027/submissions/call-for-papers/\\nTimezone: AoE (until 19:59 SGT th
+ e next day)
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:NDSS 2027 Fall cycle notification
@@ -25,8 +25,8 @@ DTEND;VALUE=DATE:20261111
 SUMMARY:IEEE S&P 2027 Cycle 2 abstract registration
 DESCRIPTION:IEEE Symposium on Security and Privacy 2027 (48th)\\nEvent: Cyc
  le 2 abstract registration\\nOfficial source: https://www.ieee-security.or
- g/Calendar/cfps/cfp-SP2027.html\\nData verified on: 2026-08-30\\nTimezone:
-  AoE (until 19:59 SGT the next day)
+ g/Calendar/cfps/cfp-SP2027.html\\nTimezone: AoE (until 19:59 SGT the next 
+ day)
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:IEEE S&P 2027 Cycle 2 abstract registration
@@ -45,8 +45,8 @@ DTEND;VALUE=DATE:20261120
 SUMMARY:CCS 2026 Conference (both cycles closed)
 DESCRIPTION:ACM Conference on Computer and Communications Security 2026\\nE
  vent: Conference (both cycles closed)\\nOfficial source: https://www.sigsa
- c.org/ccs/CCS2026/call-for/call-for-papers.html\\nData verified on: 2026-0
- 8-30\\nLocation: The Hague\, Netherlands
+ c.org/ccs/CCS2026/call-for/call-for-papers.html\\nLocation: The Hague\, Ne
+ therlands
 LOCATION:The Hague\, Netherlands
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -66,8 +66,7 @@ DTEND;VALUE=DATE:20261118
 SUMMARY:IEEE S&P 2027 Cycle 2 paper deadline
 DESCRIPTION:IEEE Symposium on Security and Privacy 2027 (48th)\\nEvent: Cyc
  le 2 paper deadline\\nOfficial source: https://www.ieee-security.org/Calen
- dar/cfps/cfp-SP2027.html\\nData verified on: 2026-08-30\\nTimezone: AoE (u
- ntil 19:59 SGT the next day)
+ dar/cfps/cfp-SP2027.html\\nTimezone: AoE (until 19:59 SGT the next day)
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:IEEE S&P 2027 Cycle 2 paper deadline
@@ -80,30 +79,15 @@ TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:6829bcd1c82fb727@deadline-calendar
-DTSTART;VALUE=DATE:20270106
-DTEND;VALUE=DATE:20270107
-SUMMARY:NDSS 2027 Camera-ready deadline
-DESCRIPTION:Network and Distributed System Security Symposium 2027\\nEvent:
-  Camera-ready deadline\\nOfficial source: https://www.ndss-symposium.org/n
- dss2027/submissions/call-for-papers/\\nData verified on: 2026-08-30\\nTime
- zone: AoE (until 19:59 SGT the next day)
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:NDSS 2027 Camera-ready deadline
-TRIGGER:-P1D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2056bc97aa8db8bd@deadline-calendar
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
 SUMMARY:EST. CCS 2027 Cycle A abstract registration
 DESCRIPTION:ACM Conference on Computer and Communications Security 2027\\nE
  vent: Cycle A abstract registration\\nOfficial source: https://www.sigsac.
- org/ccs/CCS2027/\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:
- 59 SGT the next day)\\nNOTE: CFP not yet published\; date projected from C
- CS 2026 Cycle A (2026-01-07) — verify before relying on it
+ org/ccs/CCS2027/\\nTimezone: AoE (until 19:59 SGT the next day)\\nNOTE: CF
+ P not yet published\; date projected from CCS 2026 Cycle A (2026-01-07) 
+ — verify before relying on it
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EST. CCS 2027 Cycle A abstract registration
@@ -122,9 +106,9 @@ DTEND;VALUE=DATE:20270114
 SUMMARY:EST. CCS 2027 Cycle A paper deadline
 DESCRIPTION:ACM Conference on Computer and Communications Security 2027\\nE
  vent: Cycle A paper deadline\\nOfficial source: https://www.sigsac.org/ccs
- /CCS2027/\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:59 SGT 
- the next day)\\nNOTE: CFP not yet published\; date projected from CCS 2026
-  Cycle A (2026-01-14) — verify before relying on it
+ /CCS2027/\\nTimezone: AoE (until 19:59 SGT the next day)\\nNOTE: CFP not y
+ et published\; date projected from CCS 2026 Cycle A (2026-01-14) — verif
+ y before relying on it
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EST. CCS 2027 Cycle A paper deadline
@@ -143,8 +127,7 @@ DTEND;VALUE=DATE:20270120
 SUMMARY:USENIX Security 2027 Cycle 2 mandatory registration
 DESCRIPTION:36th USENIX Security Symposium\\nEvent: Cycle 2 mandatory regis
  tration\\nOfficial source: https://www.usenix.org/conference/usenixsecurit
- y27/call-for-papers\\nData verified on: 2026-08-30\\nTimezone: AoE (until 
- 19:59 SGT the next day)
+ y27/call-for-papers\\nTimezone: AoE (until 19:59 SGT the next day)
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:USENIX Security 2027 Cycle 2 mandatory registration
@@ -163,8 +146,7 @@ DTEND;VALUE=DATE:20270127
 SUMMARY:USENIX Security 2027 Cycle 2 paper deadline
 DESCRIPTION:36th USENIX Security Symposium\\nEvent: Cycle 2 paper deadline\
  \nOfficial source: https://www.usenix.org/conference/usenixsecurity27/call
- -for-papers\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:59 SG
- T the next day)
+ -for-papers\\nTimezone: AoE (until 19:59 SGT the next day)
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:USENIX Security 2027 Cycle 2 paper deadline
@@ -183,8 +165,7 @@ DTEND;VALUE=DATE:20270306
 SUMMARY:IEEE S&P 2027 Cycle 2 notification
 DESCRIPTION:IEEE Symposium on Security and Privacy 2027 (48th)\\nEvent: Cyc
  le 2 notification\\nOfficial source: https://www.ieee-security.org/Calenda
- r/cfps/cfp-SP2027.html\\nData verified on: 2026-08-30\\nTimezone: AoE (unt
- il 19:59 SGT the next day)
+ r/cfps/cfp-SP2027.html\\nTimezone: AoE (until 19:59 SGT the next day)
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:IEEE S&P 2027 Cycle 2 notification
@@ -198,8 +179,7 @@ DTEND;VALUE=DATE:20270327
 SUMMARY:NDSS 2027 Conference
 DESCRIPTION:Network and Distributed System Security Symposium 2027\\nEvent:
   Conference\\nOfficial source: https://www.ndss-symposium.org/ndss2027/sub
- missions/call-for-papers/\\nData verified on: 2026-08-30\\nLocation: Seoul
- \, Korea
+ missions/call-for-papers/\\nLocation: Seoul\, Korea
 LOCATION:Seoul\, Korea
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -213,30 +193,15 @@ TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:17eb18e50b04ceba@deadline-calendar
-DTSTART;VALUE=DATE:20270408
-DTEND;VALUE=DATE:20270409
-SUMMARY:IEEE S&P 2027 Camera-ready deadline
-DESCRIPTION:IEEE Symposium on Security and Privacy 2027 (48th)\\nEvent: Cam
- era-ready deadline\\nOfficial source: https://www.ieee-security.org/Calend
- ar/cfps/cfp-SP2027.html\\nData verified on: 2026-08-30\\nTimezone: AoE (un
- til 19:59 SGT the next day)
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:IEEE S&P 2027 Camera-ready deadline
-TRIGGER:-P1D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:f0eb88287df06f3a@deadline-calendar
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
 SUMMARY:EST. CCS 2027 Cycle B abstract registration
 DESCRIPTION:ACM Conference on Computer and Communications Security 2027\\nE
  vent: Cycle B abstract registration\\nOfficial source: https://www.sigsac.
- org/ccs/CCS2027/\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:
- 59 SGT the next day)\\nNOTE: CFP not yet published\; date projected from C
- CS 2026 Cycle B (2026-04-22) — verify before relying on it
+ org/ccs/CCS2027/\\nTimezone: AoE (until 19:59 SGT the next day)\\nNOTE: CF
+ P not yet published\; date projected from CCS 2026 Cycle B (2026-04-22) 
+ — verify before relying on it
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EST. CCS 2027 Cycle B abstract registration
@@ -255,9 +220,9 @@ DTEND;VALUE=DATE:20270429
 SUMMARY:EST. CCS 2027 Cycle B paper deadline
 DESCRIPTION:ACM Conference on Computer and Communications Security 2027\\nE
  vent: Cycle B paper deadline\\nOfficial source: https://www.sigsac.org/ccs
- /CCS2027/\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:59 SGT 
- the next day)\\nNOTE: CFP not yet published\; date projected from CCS 2026
-  Cycle B (2026-04-29) — verify before relying on it
+ /CCS2027/\\nTimezone: AoE (until 19:59 SGT the next day)\\nNOTE: CFP not y
+ et published\; date projected from CCS 2026 Cycle B (2026-04-29) — verif
+ y before relying on it
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EST. CCS 2027 Cycle B paper deadline
@@ -276,9 +241,9 @@ DTEND;VALUE=DATE:20270506
 SUMMARY:EST. NDSS 2028 Summer cycle paper deadline
 DESCRIPTION:Network and Distributed System Security Symposium 2028\\nEvent:
   Summer cycle paper deadline\\nOfficial source: https://www.ndss-symposium
- .org/\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:59 SGT the 
- next day)\\nNOTE: CFP not yet published\; date projected from NDSS 2027 Su
- mmer (2026-05-06) — verify before relying on it
+ .org/\\nTimezone: AoE (until 19:59 SGT the next day)\\nNOTE: CFP not yet p
+ ublished\; date projected from NDSS 2027 Summer (2026-05-06) — verify be
+ fore relying on it
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EST. NDSS 2028 Summer cycle paper deadline
@@ -297,8 +262,7 @@ DTEND;VALUE=DATE:20270507
 SUMMARY:USENIX Security 2027 Cycle 2 notification
 DESCRIPTION:36th USENIX Security Symposium\\nEvent: Cycle 2 notification\\n
  Official source: https://www.usenix.org/conference/usenixsecurity27/call-f
- or-papers\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:59 SGT 
- the next day)
+ or-papers\\nTimezone: AoE (until 19:59 SGT the next day)
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:USENIX Security 2027 Cycle 2 notification
@@ -312,8 +276,7 @@ DTEND;VALUE=DATE:20270520
 SUMMARY:IEEE S&P 2027 Conference (workshops May 20)
 DESCRIPTION:IEEE Symposium on Security and Privacy 2027 (48th)\\nEvent: Con
  ference (workshops May 20)\\nOfficial source: https://www.ieee-security.or
- g/Calendar/cfps/cfp-SP2027.html\\nData verified on: 2026-08-30\\nLocation:
-  Montreal\, Canada
+ g/Calendar/cfps/cfp-SP2027.html\\nLocation: Montreal\, Canada
 LOCATION:Montreal\, Canada
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -327,30 +290,15 @@ TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:f296c6976e083321@deadline-calendar
-DTSTART;VALUE=DATE:20270603
-DTEND;VALUE=DATE:20270604
-SUMMARY:USENIX Security 2027 Final papers due
-DESCRIPTION:36th USENIX Security Symposium\\nEvent: Final papers due\\nOffi
- cial source: https://www.usenix.org/conference/usenixsecurity27/call-for-p
- apers\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:59 SGT the 
- next day)
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:USENIX Security 2027 Final papers due
-TRIGGER:-P1D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:73f29b28afac1783@deadline-calendar
 DTSTART;VALUE=DATE:20270721
 DTEND;VALUE=DATE:20270722
 SUMMARY:EST. NDSS 2028 Summer cycle notification
 DESCRIPTION:Network and Distributed System Security Symposium 2028\\nEvent:
   Summer cycle notification\\nOfficial source: https://www.ndss-symposium.o
- rg/\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:59 SGT the ne
- xt day)\\nNOTE: CFP not yet published\; date projected from NDSS 2027 Summ
- er (2026-07-22) — verify before relying on it
+ rg/\\nTimezone: AoE (until 19:59 SGT the next day)\\nNOTE: CFP not yet pub
+ lished\; date projected from NDSS 2027 Summer (2026-07-22) — verify befo
+ re relying on it
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EST. NDSS 2028 Summer cycle notification
@@ -364,7 +312,7 @@ DTEND;VALUE=DATE:20270814
 SUMMARY:USENIX Security 2027 Conference
 DESCRIPTION:36th USENIX Security Symposium\\nEvent: Conference\\nOfficial s
  ource: https://www.usenix.org/conference/usenixsecurity27/call-for-papers\
- \nData verified on: 2026-08-30\\nLocation: Denver\, CO\, USA
+ \nLocation: Denver\, CO\, USA
 LOCATION:Denver\, CO\, USA
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -384,9 +332,9 @@ DTEND;VALUE=DATE:20270819
 SUMMARY:EST. NDSS 2028 Fall cycle paper deadline
 DESCRIPTION:Network and Distributed System Security Symposium 2028\\nEvent:
   Fall cycle paper deadline\\nOfficial source: https://www.ndss-symposium.o
- rg/\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:59 SGT the ne
- xt day)\\nNOTE: CFP not yet published\; date projected from NDSS 2027 Fall
-  (2026-08-19) — verify before relying on it
+ rg/\\nTimezone: AoE (until 19:59 SGT the next day)\\nNOTE: CFP not yet pub
+ lished\; date projected from NDSS 2027 Fall (2026-08-19) — verify before
+  relying on it
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EST. NDSS 2028 Fall cycle paper deadline
@@ -405,9 +353,9 @@ DTEND;VALUE=DATE:20271104
 SUMMARY:EST. NDSS 2028 Fall cycle notification
 DESCRIPTION:Network and Distributed System Security Symposium 2028\\nEvent:
   Fall cycle notification\\nOfficial source: https://www.ndss-symposium.org
- /\\nData verified on: 2026-08-30\\nTimezone: AoE (until 19:59 SGT the next
-  day)\\nNOTE: CFP not yet published\; date projected from NDSS 2027 Fall (
- 2026-11-04) — verify before relying on it
+ /\\nTimezone: AoE (until 19:59 SGT the next day)\\nNOTE: CFP not yet publi
+ shed\; date projected from NDSS 2027 Fall (2026-11-04) — verify before r
+ elying on it
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EST. NDSS 2028 Fall cycle notification

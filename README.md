@@ -1,6 +1,8 @@
 # Top-4 Security Conference Deadline Calendar
 
-Deadline tracking for the top-4 security conferences — **IEEE S&P / ACM CCS / USENIX Security / NDSS**. One JSON data source, one Python script, three generated artifacts:
+Deadline tracking for the top-4 security conferences — **IEEE S&P / ACM CCS / USENIX Security / NDSS**. One JSON data source, one Python script, three generated artifacts.
+
+Tracked dates: **abstract / mandatory registration**, **paper deadline**, **notification**, and **conference dates**. Camera-ready / final-paper deadlines are intentionally not tracked.
 
 | Artifact | Path | Purpose |
 |---|---|---|
@@ -12,7 +14,7 @@ Deadline tracking for the top-4 security conferences — **IEEE S&P / ACM CCS / 
 
 - **Apple Calendar**: double-click `security-deadlines.ics` (or `open docs/security-deadlines.ics`) and choose a calendar.
 - **Google Calendar**: Settings → Import & export → Import the ICS file. A dedicated "Deadlines" calendar is recommended so reminders can be toggled as a group.
-- Events are all-day, e.g. `S&P 2027 Cycle 2 paper deadline`. Reminders (VALARM): 7 + 1 days for registration/submission, 1 day for notifications and camera-ready, 7 + 1 days for conferences.
+- Events are all-day, e.g. `S&P 2027 Cycle 2 paper deadline`. Reminders (VALARM): 7 + 1 days for registration/submission and conferences, 1 day for notifications.
 
 ## Timezone note
 
@@ -20,11 +22,11 @@ All dates are as stated by the official CFPs, in **AoE (UTC-12)**:
 - In Singapore time (UTC+8), a deadline effectively extends to **19:59 the next day** — e.g. 2026-11-17 AoE ≈ by 19:59 on 2026-11-18 SGT.
 - Calendar entries are placed on the official (AoE) date; plan for the extra half-day when submitting from Asia.
 
-## Current data (verified 2026-08-29)
+## Current data (verified 2026-08-30)
 
-- **IEEE S&P 2027** (May 17–19, Montreal): Cycle 2 abstract 11/10, deadline 11/17, notification 3/5, camera-ready 4/8
-- **USENIX Security 2027** (Aug 11–13, Denver): Cycle 2 registration 1/19, deadline 1/26, notification 5/6, final papers 6/3
-- **NDSS 2027** (Mar 22–26, Seoul): Fall notification 11/4, camera-ready 1/6
+- **IEEE S&P 2027** (May 17–19, Montreal): Cycle 2 abstract 11/10, paper deadline 11/17, notification 3/5
+- **USENIX Security 2027** (Aug 11–13, Denver): Cycle 2 registration 1/19, paper deadline 1/26, notification 5/6
+- **NDSS 2027** (Mar 22–26, Seoul): Fall cycle notification 11/4
 - **CCS 2026** (Nov 15–19, The Hague): conference dates only
 - **CCS 2027 / NDSS 2028**: CFPs not yet published — dates are **projections** from past cycles (`estimated: true`, shown in orange with an "EST." badge)
 
@@ -40,13 +42,13 @@ python3 generate.py    # stdlib only, no dependencies
 - [ ] **NDSS 2028**: replace the 4 projected events in `ndss-2028`; add conference dates and location
 - Every conference record carries its official `source_url` and `verified_on` for auditing.
 
-## Automated monthly CFP check (launchd)
+## Automated weekly CFP check (launchd)
 
-A monthly job verifies the official CFP pages against `deadlines.json`, updates anything that changed, regenerates the artifacts, and — only if the check succeeded — commits and pushes the changes so the public site stays current:
+A weekly job verifies the official CFP pages against `deadlines.json`, updates anything that changed, regenerates the artifacts, and — only if the check succeeded — commits and pushes the changes so the public site stays current:
 
 - `cfp-check.sh` — wrapper that runs Claude Code headless with the fixed prompt in `cfp-check-prompt.md`, then commits/pushes if the check succeeded and files changed
 - `cfp-check.env` — API credentials in `~/.claude/` (outside the repo; created separately, see note below)
-- `com.menghao.security-deadlines-cfpcheck.plist` — launchd agent, runs on the 3rd of every month at 09:07 local time
+- `com.menghao.security-deadlines-cfpcheck.plist` — launchd agent, runs every Monday at 09:07 local time
 - Logs to `cfp-check.log`
 
 Note: the wrapper loads `~/.claude/cfp-check.env` (ANTHROPIC_* variables for the API gateway). Create it once with `chmod 600` before the first run, e.g. by exporting the same variables your interactive Claude Code session uses.
@@ -76,7 +78,7 @@ The prompt restricts the agent to this directory and to the official CFP URLs li
     "source_url": "official CFP page",
     "verified_on": "date the data was checked against the source",
     "events": [{
-      "kind": "abstract | registration | submission | notification | camera-ready | conference",
+      "kind": "abstract | registration | submission | notification | conference",
       "label": "event name",
       "date": "YYYY-MM-DD | null (TBA)",
       "date_end": "end date for conference events | null",

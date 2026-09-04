@@ -21,7 +21,6 @@ KIND_LABEL = {
     "registration": "Mandatory reg.",
     "submission": "Paper deadline",
     "notification": "Notification",
-    "camera-ready": "Camera-ready",
     "conference": "Conference",
 }
 
@@ -31,7 +30,6 @@ ALARM_DAYS = {
     "registration": (7, 1),
     "submission": (7, 1),
     "notification": (1,),
-    "camera-ready": (1,),
     "conference": (7, 1),
 }
 
@@ -122,7 +120,6 @@ def gen_ics(data):
             conf["full_name"],
             f"Event: {ev['label']}",
             f"Official source: {conf['source_url']}",
-            f"Data verified on: {conf['verified_on']}",
         ]
         if ev["tz_note"]:
             desc_parts.append(f"Timezone: {ev['tz_note']} (until 19:59 SGT the next day)")
@@ -188,7 +185,7 @@ def gen_md(data):
             cd = conf["conference_dates"]
             meta += f" (conference {cd['start']} ~ {cd['end']})"
         meta += f", {conf['location']}"
-        out.append(f"{meta}  \n[Official source]({conf['source_url']}) · verified {conf['verified_on']}")
+        out.append(f"{meta}  \n[Official source]({conf['source_url']})")
         out.append("")
         out.append("| Date | Event | Kind | Notes |")
         out.append("|---|---|---|---|")
@@ -474,7 +471,6 @@ tr.estimated td { background: #fdf6e3; }
 .b-submission { background: #fdecea; color: #b3261e; }
 .b-registration, .b-abstract { background: #e8f0fe; color: #1a56c4; }
 .b-notification { background: #e6f4ea; color: #137333; }
-.b-camera-ready { background: #f3e8fd; color: #7627bb; }
 .b-conference { background: #eef1f4; color: #3c4043; }
 .est-badge { background: #f9ab00; color: #5f3b00; }
 .days { white-space: nowrap; font-variant-numeric: tabular-nums; }
@@ -565,8 +561,7 @@ def gen_html(data):
         dates_txt = f"conference {cd['start']} ~ {cd['end']}" if cd else "conference dates TBA"
         meta = (
             f'<div class="meta">{html.escape(conf["full_name"])} · {dates_txt} · '
-            f'{html.escape(conf["location"])} · <a href="{html.escape(conf["source_url"])}">official CFP</a> · '
-            f'verified {conf["verified_on"]}</div>'
+            f'{html.escape(conf["location"])} · <a href="{html.escape(conf["source_url"])}">official CFP</a></div>'
         )
         cards.append(
             f'<div class="card"><h2>{html.escape(conf["short_name"])}</h2>{meta}'

@@ -7,12 +7,12 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/haomeng/claude-projects/paper-review/deadline-calendar/cfp-check.sh</string>
+        <string>/Users/haomeng/claude-projects/security-deadlines/cfp-check.sh</string>
     </array>
     <key>StartCalendarInterval</key>
     <dict>
-        <key>Day</key>
-        <integer>3</integer>
+        <key>Weekday</key>
+        <integer>1</integer>
         <key>Hour</key>
         <integer>9</integer>
         <key>Minute</key>
