@@ -589,7 +589,6 @@ effectively extend to 19:59 the next day. <b>Orange rows</b> = CFP not yet publi
 cycles and must be verified. Strikethrough = passed.
 </div>
 {body}
-<footer>Generated from deadlines.json by generate.py — edit the data file and re-run <code>python3 generate.py</code> to update.</footer>
 </div>
 <script>{JS}</script>
 </body>
