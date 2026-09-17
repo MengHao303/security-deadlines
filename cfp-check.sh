@@ -14,6 +14,9 @@ ALLOWED="Bash(curl:*),Bash(python3:*),Bash(ls:*),Read,Edit,Write,Glob"
 
 log() { echo "=== $* ===" >> "$LOG"; }
 
+# 代理探测：定义 detect_git_proxy / GIT_PROXY / GIT_PROXY_NOTE
+. "$DIR/git-proxy.sh"
+
 # 发布环节出问题时必须看得见：写日志 + 落一个标记文件 + 弹系统通知。
 # 2026-09-14 那次就是因为失败完全无声，站点停更了十天才被发现。
 fail() {
@@ -71,21 +74,9 @@ if [ "$rc" -ne 0 ]; then
 fi
 
 # 核查成功后：有文件变化则提交并推送，公开站点随之更新。
-# 代理自动探测：本机代理端口连得上才走代理，否则直连。
-# 全局 git config 里配了 http(s).proxy，直连时必须显式置空覆盖它。
-PROXY_HOST=127.0.0.1
-PROXY_PORT=10808
-if (exec 3<>"/dev/tcp/$PROXY_HOST/$PROXY_PORT") 2>/dev/null; then
-    exec 3>&-
-    PROXY_URL="http://$PROXY_HOST:$PROXY_PORT"
-    export HTTPS_PROXY="$PROXY_URL" HTTP_PROXY="$PROXY_URL"
-    log "proxy up at $PROXY_HOST:$PROXY_PORT, pushing through it"
-else
-    PROXY_URL=""
-    unset HTTPS_PROXY HTTP_PROXY
-    log "no proxy at $PROXY_HOST:$PROXY_PORT, pushing directly"
-fi
-GIT_PROXY=(-c "http.proxy=$PROXY_URL" -c "https.proxy=$PROXY_URL")
+# 代理自动探测见 git-proxy.sh（手工操作用同目录的 ./gitp，逻辑完全一致）。
+detect_git_proxy
+log "$GIT_PROXY_NOTE"
 
 if git status --porcelain | grep -q .; then
     git add -A >> "$LOG" 2>&1

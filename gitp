@@ -1,0 +1,10 @@
+#!/bin/bash
+# 带代理自动探测的 git：本机代理开着就走代理，没开就直连。
+# 这个仓库里需要联网的 git 操作都用它，例如：
+#   ./gitp push
+#   ./gitp pull
+set -uo pipefail
+. "$(cd "$(dirname "$0")" && pwd)/git-proxy.sh"
+detect_git_proxy
+echo "gitp: $GIT_PROXY_NOTE" >&2
+exec git "${GIT_PROXY[@]}" "$@"

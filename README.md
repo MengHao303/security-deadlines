@@ -53,6 +53,7 @@ A weekly job verifies the official CFP pages against `deadlines.json`, updates a
 - `cfp-check.sh` — wrapper that runs Claude Code headless with the fixed prompt in `cfp-check-prompt.md`, then commits/pushes if the check succeeded and files changed
 - `com.menghao.security-deadlines-cfpcheck.plist` — launchd agent, runs every Monday at 09:07 local time
 - Logs to `cfp-check.log`
+- `git-proxy.sh` — shared proxy detection, also used by the `gitp` wrapper (see below)
 
 Publishing is guarded so a run can never fail silently:
 
@@ -72,6 +73,19 @@ launchctl kickstart gui/$(id -u)/com.menghao.security-deadlines-cfpcheck   # run
 ```
 
 The prompt restricts the agent to this directory and to the official CFP URLs listed in `deadlines.json`; `estimated: true` entries are its priority checklist — replace them as soon as a CFP appears.
+
+## Proxy note (`gitp`)
+
+The global git config points `http.proxy` / `https.proxy` at `http://127.0.0.1:10808`. Whenever the local proxy client is not running, every git network operation fails with `Failed to connect to 127.0.0.1 port 10808` — even though GitHub is reachable directly.
+
+`git-proxy.sh` probes that port and picks the route; `gitp` is a git wrapper around it, so use it for anything that touches the network in this repo:
+
+```bash
+./gitp push      # proxy up -> through the proxy; proxy down -> direct
+./gitp pull
+```
+
+Direct mode overrides the global setting with `-c http.proxy= -c https.proxy=`; plain `git push` does **not** and will still fail while the proxy is down. `cfp-check.sh` sources the same helper, so the weekly publish already works either way.
 
 ## Data schema (`deadlines.json`)
 
