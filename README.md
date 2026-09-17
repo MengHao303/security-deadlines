@@ -50,6 +50,12 @@ A weekly job verifies the official CFP pages against `deadlines.json`, updates a
 - `com.menghao.security-deadlines-cfpcheck.plist` — launchd agent, runs every Monday at 09:07 local time
 - Logs to `cfp-check.log`
 
+Publishing is guarded so a run can never fail silently:
+
+- Stale `.git/*.lock` files (left by a crashed or killed git process) are cleared before each run — verified with `lsof` so a lock a live git process still holds is never touched. A failed commit clears them again and retries once.
+- If the commit or push fails, or if `HEAD` does not match `origin/main` afterwards, the job writes `.cfp-check-failed`, posts a macOS notification, and exits non-zero (visible in `launchctl list`).
+- A successful run removes `.cfp-check-failed`, so the presence of that file always means the site is behind.
+
 Note: the job runs as the account you are logged into with `claude` (credentials live in the macOS Keychain). The wrapper unsets any inherited `ANTHROPIC_*` gateway variables so it always talks to the default endpoint — no tokens are needed in or next to the repo.
 
 Install / inspect:
