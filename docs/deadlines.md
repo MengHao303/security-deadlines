@@ -1,6 +1,6 @@
 # Top-4 Security Conference Deadline Calendar
 
-> Data last updated 2026-09-14 (generated 2026-09-14).
+> Data last updated 2026-09-17 (generated 2026-09-17).
 > Dates are as stated by the official CFPs, timezone **AoE (UTC-12)** — in Singapore time (UTC+8) deadlines effectively extend to **19:59 the next day**.
 > ⚠️ Rows marked "est.": CFP not yet published; dates are projected from past cycles and must be verified.
 
@@ -71,4 +71,22 @@ Network and Distributed System Security Symposium 2028, TBA (San Diego in past y
 | 2027-07-21 | Summer cycle notification | Notification | est. (from NDSS 2027 Summer (2026-07-22)) |
 | 2027-08-18 | Fall cycle paper deadline | Paper deadline | est. (from NDSS 2027 Fall (2026-08-19)) |
 | 2027-11-03 | Fall cycle notification | Notification | est. (from NDSS 2027 Fall (2026-11-04)) |
+
+## IEEE S&P 2028
+
+IEEE Symposium on Security and Privacy 2028 (49th), TBA (May 2028 in past years)  
+[Official source](https://www.ieee-security.org/Calendar/cfps/)
+
+| Date | Event | Kind | Notes |
+|---|---|---|---|
+| 2027-06-10 | Cycle 1 paper deadline | Paper deadline | est. (from S&P 2027 Cycle 1 (2026-06-11)) |
+
+## USENIX Security 2028
+
+37th USENIX Security Symposium, TBA (August 2028 in past years)  
+[Official source](https://www.usenix.org/conference/usenixsecurity28)
+
+| Date | Event | Kind | Notes |
+|---|---|---|---|
+| 2027-08-24 | Cycle 1 paper deadline | Paper deadline | est. (from USENIX Security 2027 Cycle 1 (2026-08-25)) |
 

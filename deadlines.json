@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14",
+  "updated_at": "2026-09-17",
   "note": "Deadline calendar for the top-4 security conferences (IEEE S&P / ACM CCS / USENIX Security / NDSS). Tracked event kinds: abstract/mandatory registration, paper deadline, notification, conference dates (camera-ready deadlines are intentionally not tracked). Events with estimated=true: CFP not yet published; dates are projections from past cycles and must be verified. Timezones: AoE (UTC-12, i.e., until 19:59 SGT the next day) unless noted otherwise.",
   "conferences": [
     {
@@ -86,6 +86,30 @@
         { "kind": "notification", "label": "Summer cycle notification", "date": "2027-07-21", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "NDSS 2027 Summer (2026-07-22)" },
         { "kind": "submission", "label": "Fall cycle paper deadline", "date": "2027-08-18", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "NDSS 2027 Fall (2026-08-19)" },
         { "kind": "notification", "label": "Fall cycle notification", "date": "2027-11-03", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "NDSS 2027 Fall (2026-11-04)" }
+      ]
+    },
+    {
+      "id": "sp-2028",
+      "short_name": "IEEE S&P 2028",
+      "full_name": "IEEE Symposium on Security and Privacy 2028 (49th)",
+      "conference_dates": null,
+      "location": "TBA (May 2028 in past years)",
+      "source_url": "https://www.ieee-security.org/Calendar/cfps/",
+      "verified_on": "2026-09-17",
+      "events": [
+        { "kind": "submission", "label": "Cycle 1 paper deadline", "date": "2027-06-10", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "S&P 2027 Cycle 1 (2026-06-11)" }
+      ]
+    },
+    {
+      "id": "usenixsec-2028",
+      "short_name": "USENIX Security 2028",
+      "full_name": "37th USENIX Security Symposium",
+      "conference_dates": null,
+      "location": "TBA (August 2028 in past years)",
+      "source_url": "https://www.usenix.org/conference/usenixsecurity28",
+      "verified_on": "2026-09-17",
+      "events": [
+        { "kind": "submission", "label": "Cycle 1 paper deadline", "date": "2027-08-24", "date_end": null, "tz_note": "AoE", "estimated": true, "estimated_from": "USENIX Security 2027 Cycle 1 (2026-08-25)" }
       ]
     }
   ]

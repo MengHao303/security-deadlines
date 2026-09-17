@@ -210,6 +210,10 @@ MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 # 固定颜色槽位：颜色跟随会议身份，与 JSON 顺序无关
 CONF_SLOTS = {"sp-": 1, "ccs-": 2, "usenixsec-": 3, "ndss-": 4}
 
+# 时间轴按会议系列合并成一行（同系列的不同年份共用一行与一种颜色）
+SERIES_NAME = {"sp-": "IEEE S&P", "ccs-": "ACM CCS",
+               "usenixsec-": "USENIX Security", "ndss-": "NDSS"}
+
 
 def month_add(d, n):
     m = d.month - 1 + n
@@ -223,16 +227,18 @@ def gen_timeline(data):
     end = month_add(start, 12) - datetime.timedelta(days=1)
     window = (end - start).days
 
-    rows = []  # (conf, events)
+    series = {}  # series key -> [(conf, ev), ...]
     for conf in data["conferences"]:
-        evs = [ev for ev in conf["events"]
-               if ev["kind"] == "submission" and parse_date(ev["date"])
-               and start <= parse_date(ev["date"]) <= end]
-        if evs:
-            rows.append((conf, sorted(evs, key=lambda e: parse_date(e["date"]))))
+        key = conf["id"].split("-")[0] + "-"
+        for ev in conf["events"]:
+            d = parse_date(ev["date"])
+            if ev["kind"] == "submission" and d and start <= d <= end:
+                series.setdefault(key, []).append((conf, ev))
+    rows = [(key, sorted(items, key=lambda ce: parse_date(ce[1]["date"])))
+            for key, items in series.items()]
     if not rows:
         return ""
-    rows.sort(key=lambda r: CONF_SLOTS.get(r[0]["id"].split("-")[0] + "-", 9))
+    rows.sort(key=lambda r: CONF_SLOTS.get(r[0], 9))
 
     M_LEFT, M_RIGHT, M_TOP, M_BOTTOM = 150, 24, 46, 32
     ROW_H, W = 56, 960
@@ -280,9 +286,9 @@ def gen_timeline(data):
     # 图例
     legend = ""
     lx = M_LEFT
-    for conf, _ in rows:
-        slot = CONF_SLOTS[conf["id"].split("-")[0] + "-"]
-        name = conf["short_name"]
+    for key, _ in rows:
+        slot = CONF_SLOTS[key]
+        name = SERIES_NAME.get(key, key)
         legend += (
             f'<circle cx="{lx + 4:.1f}" cy="20" r="4" fill="var(--series-{slot})"/>'
             f'<text x="{lx + 14:.1f}" y="24" class="tl-legend">{name}</text>'
@@ -297,8 +303,8 @@ def gen_timeline(data):
     # 行 + 圆点 + 日期标签
     parts = []
     parts.append(today_line)
-    for i, (conf, evs) in enumerate(rows):
-        slot = CONF_SLOTS[conf["id"].split("-")[0] + "-"]
+    for i, (key, items) in enumerate(rows):
+        slot = CONF_SLOTS[key]
         yc = M_TOP + i * ROW_H + ROW_H / 2
         if i > 0:
             parts.append(
@@ -307,10 +313,10 @@ def gen_timeline(data):
             )
         parts.append(
             f'<text x="{M_LEFT - 6}" y="{yc + 4:.1f}" class="tl-row" '
-            f'text-anchor="end">{conf["short_name"]}</text>'
+            f'text-anchor="end">{SERIES_NAME.get(key, key)}</text>'
         )
         prev_label_x = None
-        for ev in evs:
+        for conf, ev in items:
             d = parse_date(ev["date"])
             x = xpos(d)
             note = (f"AoE (UTC-12) · projected from {ev['estimated_from']} — verify"

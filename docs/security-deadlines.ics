@@ -290,6 +290,27 @@ TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:16622dfc9ce90ce8@deadline-calendar
+DTSTART;VALUE=DATE:20270610
+DTEND;VALUE=DATE:20270611
+SUMMARY:EST. IEEE S&P 2028 Cycle 1 paper deadline
+DESCRIPTION:IEEE Symposium on Security and Privacy 2028 (49th)\\nEvent: Cyc
+ le 1 paper deadline\\nOfficial source: https://www.ieee-security.org/Calen
+ dar/cfps/\\nTimezone: AoE (until 19:59 SGT the next day)\\nNOTE: CFP not y
+ et published\; date projected from S&P 2027 Cycle 1 (2026-06-11) — verif
+ y before relying on it
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EST. IEEE S&P 2028 Cycle 1 paper deadline
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EST. IEEE S&P 2028 Cycle 1 paper deadline
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:73f29b28afac1783@deadline-calendar
 DTSTART;VALUE=DATE:20270721
 DTEND;VALUE=DATE:20270722
@@ -343,6 +364,27 @@ END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EST. NDSS 2028 Fall cycle paper deadline
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:c42d3b0381700b2f@deadline-calendar
+DTSTART;VALUE=DATE:20270824
+DTEND;VALUE=DATE:20270825
+SUMMARY:EST. USENIX Security 2028 Cycle 1 paper deadline
+DESCRIPTION:37th USENIX Security Symposium\\nEvent: Cycle 1 paper deadline\
+ \nOfficial source: https://www.usenix.org/conference/usenixsecurity28\\nTi
+ mezone: AoE (until 19:59 SGT the next day)\\nNOTE: CFP not yet published\;
+  date projected from USENIX Security 2027 Cycle 1 (2026-08-25) — verify 
+ before relying on it
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EST. USENIX Security 2028 Cycle 1 paper deadline
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EST. USENIX Security 2028 Cycle 1 paper deadline
 TRIGGER:-P1D
 END:VALARM
 END:VEVENT

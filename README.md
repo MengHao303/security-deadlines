@@ -22,13 +22,15 @@ All dates are as stated by the official CFPs, in **AoE (UTC-12)**:
 - In Singapore time (UTC+8), a deadline effectively extends to **19:59 the next day** — e.g. 2026-11-17 AoE ≈ by 19:59 on 2026-11-18 SGT.
 - Calendar entries are placed on the official (AoE) date; plan for the extra half-day when submitting from Asia.
 
-## Current data (verified 2026-08-30)
+## Current data (verified 2026-09-17)
 
 - **IEEE S&P 2027** (May 17–19, Montreal): Cycle 2 abstract 11/10, paper deadline 11/17, notification 3/5
 - **USENIX Security 2027** (Aug 11–13, Denver): Cycle 2 registration 1/19, paper deadline 1/26, notification 5/6
 - **NDSS 2027** (Mar 22–26, Seoul): Fall cycle notification 11/4
 - **CCS 2026** (Nov 15–19, The Hague): conference dates only
-- **CCS 2027 / NDSS 2028**: CFPs not yet published — dates are **projections** from past cycles (`estimated: true`, shown in orange with an "EST." badge)
+- **S&P 2028** (May 2028, TBA): Cycle 1 paper deadline 6/10 — projection
+- **USENIX Security 2028** (Aug 2028, TBA): Cycle 1 paper deadline 8/24 — projection
+- **CCS 2027 / NDSS 2028 / S&P 2028 / USENIX Security 2028**: CFPs not yet published — dates are **projections** from past cycles (`estimated: true`, shown in orange with an "EST." badge)
 
 ## Updating the data
 
@@ -40,6 +42,8 @@ python3 generate.py    # stdlib only, no dependencies
 
 - [ ] **CCS 2027**: replace the 4 projected events in `ccs-2027` with official dates once the CFP is out; add conference dates (Atlanta, October 2027)
 - [ ] **NDSS 2028**: replace the 4 projected events in `ndss-2028`; add conference dates and location
+- [ ] **S&P 2028**: replace the projected Cycle 1 deadline in `sp-2028` once `cfp-SP2028.html` appears; add abstract registration, notification, conference dates and location
+- [ ] **USENIX Security 2028**: replace the projected Cycle 1 deadline in `usenixsec-2028` once the CFP is out; add mandatory registration, notification, conference dates and location
 - Every conference record carries its official `source_url` and `verified_on` for auditing.
 
 ## Automated weekly CFP check (launchd)
