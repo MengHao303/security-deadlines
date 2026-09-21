@@ -1,6 +1,6 @@
 # Top-4 Security Conference Deadline Calendar
 
-> Data last updated 2026-09-17 (generated 2026-09-17).
+> Data last updated 2026-09-21 (generated 2026-09-21).
 > Dates are as stated by the official CFPs, timezone **AoE (UTC-12)** — in Singapore time (UTC+8) deadlines effectively extend to **19:59 the next day**.
 > ⚠️ Rows marked "est.": CFP not yet published; dates are projected from past cycles and must be verified.
 
@@ -35,7 +35,7 @@ Network and Distributed System Security Symposium 2027 (conference 2027-03-22 ~ 
 
 | Date | Event | Kind | Notes |
 |---|---|---|---|
-| 2026-11-04 | Fall cycle notification | Notification | — |
+| 2026-11-24 | Fall cycle notification | Notification | — |
 | 2027-03-22 ~ 2027-03-26 | Conference | Conference | — |
 
 ## CCS 2026
@@ -70,7 +70,7 @@ Network and Distributed System Security Symposium 2028, TBA (San Diego in past y
 | 2027-05-05 | Summer cycle paper deadline | Paper deadline | est. (from NDSS 2027 Summer (2026-05-06)) |
 | 2027-07-21 | Summer cycle notification | Notification | est. (from NDSS 2027 Summer (2026-07-22)) |
 | 2027-08-18 | Fall cycle paper deadline | Paper deadline | est. (from NDSS 2027 Fall (2026-08-19)) |
-| 2027-11-03 | Fall cycle notification | Notification | est. (from NDSS 2027 Fall (2026-11-04)) |
+| 2027-11-23 | Fall cycle notification | Notification | est. (from NDSS 2027 Fall (2026-11-24)) |
 
 ## IEEE S&P 2028
 

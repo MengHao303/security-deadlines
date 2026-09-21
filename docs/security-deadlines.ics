@@ -4,21 +4,6 @@ PRODID:-//deadline-calendar//security-deadlines//CN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:3154dab4262f5ea0@deadline-calendar
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
-SUMMARY:NDSS 2027 Fall cycle notification
-DESCRIPTION:Network and Distributed System Security Symposium 2027\\nEvent:
-  Fall cycle notification\\nOfficial source: https://www.ndss-symposium.org
- /ndss2027/submissions/call-for-papers/\\nTimezone: AoE (until 19:59 SGT th
- e next day)
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:NDSS 2027 Fall cycle notification
-TRIGGER:-P1D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:faa69e5793d02323@deadline-calendar
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
@@ -75,6 +60,21 @@ END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:IEEE S&P 2027 Cycle 2 paper deadline
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:3154dab4262f5ea0@deadline-calendar
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:NDSS 2027 Fall cycle notification
+DESCRIPTION:Network and Distributed System Security Symposium 2027\\nEvent:
+  Fall cycle notification\\nOfficial source: https://www.ndss-symposium.org
+ /ndss2027/submissions/call-for-papers/\\nTimezone: AoE (until 19:59 SGT th
+ e next day)
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:NDSS 2027 Fall cycle notification
 TRIGGER:-P1D
 END:VALARM
 END:VEVENT
@@ -410,13 +410,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:cc4c9718d8b9e1df@deadline-calendar
-DTSTART;VALUE=DATE:20271103
-DTEND;VALUE=DATE:20271104
+DTSTART;VALUE=DATE:20271123
+DTEND;VALUE=DATE:20271124
 SUMMARY:EST. NDSS 2028 Fall cycle notification
 DESCRIPTION:Network and Distributed System Security Symposium 2028\\nEvent:
   Fall cycle notification\\nOfficial source: https://www.ndss-symposium.org
  /\\nTimezone: AoE (until 19:59 SGT the next day)\\nNOTE: CFP not yet publi
- shed\; date projected from NDSS 2027 Fall (2026-11-04) — verify before r
+ shed\; date projected from NDSS 2027 Fall (2026-11-24) — verify before r
  elying on it
 BEGIN:VALARM
 ACTION:DISPLAY
