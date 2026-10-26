@@ -1,6 +1,6 @@
 # Top-4 Security Conference Deadline Calendar
 
-> Data last updated 2026-10-12 (generated 2026-10-12).
+> Data last updated 2026-10-26 (generated 2026-10-26).
 > Dates are as stated by the official CFPs, timezone **AoE (UTC-12)** — in Singapore time (UTC+8) deadlines effectively extend to **19:59 the next day**.
 > ⚠️ Rows marked "est.": CFP not yet published; dates are projected from past cycles and must be verified.
 
@@ -83,10 +83,11 @@ IEEE Symposium on Security and Privacy 2028 (49th), TBA (May 2028 in past years)
 
 ## USENIX Security 2028
 
-37th USENIX Security Symposium, TBA (August 2028 in past years)  
+37th USENIX Security Symposium (conference 2028-08-16 ~ 2028-08-18), Seattle, WA, USA  
 [Official source](https://www.usenix.org/conference/usenixsecurity28)
 
 | Date | Event | Kind | Notes |
 |---|---|---|---|
 | 2027-08-24 | Cycle 1 paper deadline | Paper deadline | est. (from USENIX Security 2027 Cycle 1 (2026-08-25)) |
+| 2028-08-16 ~ 2028-08-18 | Conference | Conference | — |
 
