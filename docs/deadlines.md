@@ -1,6 +1,6 @@
 # Top-4 Security Conference Deadline Calendar
 
-> Data last updated 2026-10-26 (generated 2026-10-26).
+> Data last updated 2026-11-02 (generated 2026-11-02).
 > Dates are as stated by the official CFPs, timezone **AoE (UTC-12)** — in Singapore time (UTC+8) deadlines effectively extend to **19:59 the next day**.
 > ⚠️ Rows marked "est.": CFP not yet published; dates are projected from past cycles and must be verified.
 
