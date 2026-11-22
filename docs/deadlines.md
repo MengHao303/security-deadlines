@@ -1,6 +1,6 @@
 # Top-4 Security Conference Deadline Calendar
 
-> Data last updated 2026-11-02 (generated 2026-11-02).
+> Data last updated 2026-11-22 (generated 2026-11-22).
 > Dates are as stated by the official CFPs, timezone **AoE (UTC-12)** — in Singapore time (UTC+8) deadlines effectively extend to **19:59 the next day**.
 > ⚠️ Rows marked "est.": CFP not yet published; dates are projected from past cycles and must be verified.
 
@@ -11,10 +11,10 @@ IEEE Symposium on Security and Privacy 2027 (48th) (conference 2027-05-17 ~ 2027
 
 | Date | Event | Kind | Notes |
 |---|---|---|---|
-| 2026-11-10 | Cycle 2 abstract registration | Abstract reg. | — |
-| 2026-11-17 | Cycle 2 paper deadline | Paper deadline | — |
 | 2027-03-05 | Cycle 2 notification | Notification | — |
 | 2027-05-17 ~ 2027-05-19 | Conference (workshops May 20) | Conference | — |
+| 2026-11-17 | Cycle 2 paper deadline | Paper deadline | passed |
+| 2026-11-10 | Cycle 2 abstract registration | Abstract reg. | passed |
 
 ## USENIX Security 2027
 
@@ -35,7 +35,7 @@ Network and Distributed System Security Symposium 2027 (conference 2027-03-22 ~ 
 
 | Date | Event | Kind | Notes |
 |---|---|---|---|
-| 2026-11-24 | Fall cycle notification | Notification | — |
+| 2026-12-02 | Fall cycle notification | Notification | — |
 | 2027-03-22 ~ 2027-03-26 | Conference | Conference | — |
 
 ## CCS 2026
@@ -45,7 +45,7 @@ ACM Conference on Computer and Communications Security 2026 (conference 2026-11-
 
 | Date | Event | Kind | Notes |
 |---|---|---|---|
-| 2026-11-15 ~ 2026-11-19 | Conference (both cycles closed) | Conference | — |
+| 2026-11-15 ~ 2026-11-19 | Conference (both cycles closed) | Conference | passed |
 
 ## CCS 2027
 
@@ -70,7 +70,7 @@ Network and Distributed System Security Symposium 2028, TBA (San Diego in past y
 | 2027-05-05 | Summer cycle paper deadline | Paper deadline | est. (from NDSS 2027 Summer (2026-05-06)) |
 | 2027-07-21 | Summer cycle notification | Notification | est. (from NDSS 2027 Summer (2026-07-22)) |
 | 2027-08-18 | Fall cycle paper deadline | Paper deadline | est. (from NDSS 2027 Fall (2026-08-19)) |
-| 2027-11-23 | Fall cycle notification | Notification | est. (from NDSS 2027 Fall (2026-11-24)) |
+| 2027-12-01 | Fall cycle notification | Notification | est. (from NDSS 2027 Fall (2026-12-02)) |
 
 ## IEEE S&P 2028
 
