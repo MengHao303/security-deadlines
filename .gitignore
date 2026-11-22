@@ -1,3 +1,4 @@
 cfp-check.log
 .DS_Store
 .cfp-check-failed
+/p*.html
